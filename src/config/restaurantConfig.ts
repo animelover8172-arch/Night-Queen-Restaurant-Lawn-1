@@ -6,12 +6,12 @@ import expImg4 from '../assets/images/regenerated_image_1786871709573.png';
 import expImg5 from '../assets/images/regenerated_image_1786871718600.png';
 import galleryImg1 from '../assets/images/regenerated_image_1786872739474.png';
 import galleryImg2 from '../assets/images/regenerated_image_1786872854696.png';
+import galleryImg3 from '../assets/images/banquet_hall_view_1786873047089.jpg';
+import galleryImg4 from '../assets/images/regenerated_image_1786871661794.png';
+import galleryImg5 from '../assets/images/regenerated_image_1786871682140.png';
+import galleryImg6 from '../assets/images/regenerated_image_1786871696941.png';
+import galleryImg7 from '../assets/images/regenerated_image_1786871709573.png';
 import menuImg14 from '../assets/images/regenerated_image_1786872610442.jpg';
-import momentImg1 from '../assets/images/file_000000008ea08211840b59c4cfd1e0b0.png';
-import momentImg2 from '../assets/images/file_0000000007648208991c2b15360aed39.png';
-import momentImg3 from '../assets/images/file_000000003a188211bcf59440c6edab5c.png';
-import momentImg4 from '../assets/images/file_00000000afe48211960b2df7d77dd48c.png';
-import momentImg5 from '../assets/images/file_00000000bc4082118f302aee9761e9f2.png';
 
 export const restaurantConfig: RestaurantConfig = {
   name: "Night Queen Restaurant & Lawn",
@@ -375,35 +375,35 @@ export const galleryData: GalleryItem[] = [
     id: "g-10",
     title: "Royal Banquet Suite & Neon Halo Lighting",
     category: "INTERIOR",
-    image: momentImg1,
+    image: galleryImg3,
     caption: "Magnificent tiered circular ceiling installations with ambient concentric LED halo illumination and crystal chandeliers for royal gatherings."
   },
   {
     id: "g-11",
     title: "Grand Evening Entrance & Lawn View",
     category: "OUTDOOR",
-    image: momentImg2,
+    image: galleryImg4,
     caption: "Awe-inspiring illuminated exterior and entrance walkway welcoming guests to Night Queen Restaurant & Lawn."
   },
   {
     id: "g-12",
     title: "Enchanting Lawn Garden & Evening Cabanas",
     category: "LAWN",
-    image: momentImg3,
+    image: galleryImg5,
     caption: "Lush green lawn seating under the open night sky with ambient party lights and festive celebration setup."
   },
   {
     id: "g-13",
     title: "Celebration Stage & Event Buffet Setup",
     category: "INTERIOR",
-    image: momentImg4,
+    image: galleryImg6,
     caption: "Festive floral arches, grand sofa seating, and long buffet counters ready for lavish banquets and receptions."
   },
   {
     id: "g-14",
     title: "Starlit Lawn Dinners & Open-Air Celebrations",
     category: "LAWN",
-    image: momentImg5,
+    image: galleryImg7,
     caption: "Serene open-air lawn ambiance with warm twinkling lights for unhurried dinners and celebratory moments."
   }
 ];
