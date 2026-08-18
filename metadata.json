@@ -1,0 +1,6 @@
+{
+  "name": "Night Queen Restaurant & Lawn",
+  "description": "Luxury restaurant and premium outdoor lawn destination in Sasaram, Bihar offering fine dining, outdoor seating, and celebrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
