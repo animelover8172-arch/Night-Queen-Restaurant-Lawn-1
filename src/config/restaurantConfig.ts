@@ -11,7 +11,21 @@ import galleryImg4 from '../assets/images/regenerated_image_1786871661794.png';
 import galleryImg5 from '../assets/images/regenerated_image_1786871682140.png';
 import galleryImg6 from '../assets/images/regenerated_image_1786871696941.png';
 import galleryImg7 from '../assets/images/regenerated_image_1786871709573.png';
-import menuImg14 from '../assets/images/regenerated_image_1786872610442.jpg';
+import paneerButterMasalaImg from '../assets/images/paneer_butter_masala_1790176705016.jpg';
+import murghDumBiryaniImg from '../assets/images/murgh_dum_biryani_1790176718610.jpg';
+import dalMakhaniRoyalImg from '../assets/images/dal_makhani_royal_1790176731091.jpg';
+import chickenTikkaPlatterImg from '../assets/images/chicken_tikka_platter_1790176743607.jpg';
+import kadhaiPaneerImg from '../assets/images/kadai_paneer_curry_1790176183184.jpg';
+import muttonRoganJoshImg from '../assets/images/mutton_rogan_josh_1790176754285.jpg';
+import crispyChilliPaneerImg from '../assets/images/crispy_chilli_paneer_1790176764994.jpg';
+import vegHakkaNoodlesImg from '../assets/images/veg_hakka_noodles_1790176196282.jpg';
+import crispyChilliChickenImg from '../assets/images/crispy_chilli_chicken_1790176776697.jpg';
+import signatureBlueLagoonImg from '../assets/images/signature_blue_lagoon_1790176788937.jpg';
+import freshMintMojitoImg from '../assets/images/fresh_mint_mojito_1790176802595.jpg';
+import mangoPassionCoolerImg from '../assets/images/mango_passion_cooler_1790176207511.jpg';
+import sizzlingBrownieImg from '../assets/images/sizzling_brownie_sundae_1790176218325.jpg';
+import royalGulabJamunImg from '../assets/images/royal_gulab_jamun_1790176230816.jpg';
+import butterGarlicNaanImg from '../assets/images/butter_garlic_naan_1790176241528.jpg';
 
 export const restaurantConfig: RestaurantConfig = {
   name: "Night Queen Restaurant & Lawn",
@@ -174,7 +188,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Main Course",
     description: "Fresh cottage cheese cubes simmered in a velvety, buttery tomato and cashew gravy with aromatic kasuri methi.",
     price: 260,
-    image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&auto=format&fit=crop&q=80",
+    image: paneerButterMasalaImg,
     isChefSpecial: true,
     isPopular: true,
     isVeg: true
@@ -187,7 +201,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Biryani & Rice",
     description: "Fragrant long-grain basmati rice layered with tender marinated chicken, saffron, caramelised onions, and royal spices.",
     price: 320,
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80",
+    image: murghDumBiryaniImg,
     isChefSpecial: true,
     isPopular: true,
     isSpicy: true,
@@ -201,7 +215,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Lentils",
     description: "Black lentils slow-cooked overnight over charcoal, finished with churned butter and fresh organic cream.",
     price: 220,
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&auto=format&fit=crop&q=80",
+    image: dalMakhaniRoyalImg,
     isPopular: true,
     isVeg: true
   },
@@ -213,7 +227,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Tandoor Starters",
     description: "Succulent boneless chicken chunks marinated in hung curd, Kashmiri red chillies, and roasted tandoori spices.",
     price: 340,
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&auto=format&fit=crop&q=80",
+    image: chickenTikkaPlatterImg,
     isChefSpecial: true,
     isPopular: true,
     isSpicy: true,
@@ -227,7 +241,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Main Course",
     description: "Cottage cheese tossed with crunchy bell peppers, whole coriander, dried chillies, and freshly ground kadhai masala.",
     price: 250,
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80",
+    image: kadhaiPaneerImg,
     isSpicy: true,
     isVeg: true
   },
@@ -239,7 +253,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Main Course",
     description: "Tender goat meat slow-braised in a rich gravy infused with Kashmiri cockscomb flower, fennel, and ginger.",
     price: 420,
-    image: "https://images.unsplash.com/photo-1545247181-516773cae754?w=600&auto=format&fit=crop&q=80",
+    image: muttonRoganJoshImg,
     isChefSpecial: true,
     isVeg: false
   },
@@ -252,7 +266,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Starters",
     description: "Golden fried paneer tossed with bell peppers, spring onions, dark soya sauce, and fresh green chillies.",
     price: 240,
-    image: "https://images.unsplash.com/photo-1567337710282-00832b415979?w=600&auto=format&fit=crop&q=80",
+    image: crispyChilliPaneerImg,
     isPopular: true,
     isSpicy: true,
     isVeg: true
@@ -265,7 +279,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Noodles & Rice",
     description: "Wok-tossed noodles with shredded farm vegetables served alongside crispy vegetable dumplings in savoury gravy.",
     price: 210,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=80",
+    image: vegHakkaNoodlesImg,
     isVeg: true
   },
   {
@@ -276,7 +290,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Starters",
     description: "Crisp-fried chicken morsels glazed in sweet & spicy garlic soy sauce with cracked black pepper.",
     price: 290,
-    image: "https://images.unsplash.com/photo-1625938144755-652e08e359b7?w=600&auto=format&fit=crop&q=80",
+    image: crispyChilliChickenImg,
     isSpicy: true,
     isVeg: false
   },
@@ -289,7 +303,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Mocktail Bar",
     description: "Refreshing blend of blue curacao syrup, sparkling citrus soda, fresh mint leaves, and lime wheel.",
     price: 150,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80",
+    image: signatureBlueLagoonImg,
     isChefSpecial: true,
     isPopular: true,
     isVeg: true
@@ -302,7 +316,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Mocktail Bar",
     description: "Muddled garden mint, hand-pressed lime juice, crushed ice, and effervescent sparkling water.",
     price: 130,
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80",
+    image: freshMintMojitoImg,
     isVeg: true
   },
   {
@@ -313,7 +327,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Mocktail Bar",
     description: "Tropical Alphonso mango puree blended with passion fruit, crushed ice, and a dash of grenadine.",
     price: 160,
-    image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&auto=format&fit=crop&q=80",
+    image: mangoPassionCoolerImg,
     isChefSpecial: true,
     isVeg: true
   },
@@ -326,7 +340,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Desserts",
     description: "Rich dark chocolate walnut brownie served sizzling hot on a cast-iron platter, crowned with rich vanilla gelato and hot fudge.",
     price: 190,
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&q=80",
+    image: sizzlingBrownieImg,
     isChefSpecial: true,
     isPopular: true,
     isVeg: true
@@ -339,7 +353,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Desserts",
     description: "Warm golden khoya dumplings soaked in saffron-cardamom syrup, served over chilled slow-reduced pistachios rabri.",
     price: 140,
-    image: menuImg14,
+    image: royalGulabJamunImg,
     isPopular: true,
     isVeg: true
   },
@@ -351,7 +365,7 @@ export const menuItemsData: MenuItem[] = [
     subCategory: "Breads",
     description: "Fluffy leavened tandoor bread brushed generously with pure butter, crushed fresh garlic, and toasted coriander.",
     price: 60,
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&auto=format&fit=crop&q=80",
+    image: butterGarlicNaanImg,
     isVeg: true
   }
 ];
