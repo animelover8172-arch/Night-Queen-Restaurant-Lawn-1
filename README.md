@@ -11,9 +11,9 @@
 
 ## 🍽️ About Night Queen Restaurant & Lawn
 
-Night Queen Restaurant & Lawn is a premier culinary destination located on Ara Patna Road, Baijla, Sasaram, Bihar. Known for authentic multi-cuisine delicacies (North Indian, Chinese, Mughlai, Tandoori), open-air lush lawn seating, royal banquet facilities, and vibrant family celebrations.
+Night Queen Restaurant & Lawn is a premier culinary destination located at Kali Asthan Mandir Chowk, Near CMC. Known for authentic multi-cuisine delicacies (North Indian, Chinese, Mughlai, Tandoori), open-air lush lawn seating, royal banquet facilities, and vibrant family celebrations.
 
-- **📍 Address:** Ara Patna Road, Baijla, Sasaram, Bihar 821113
+- **📍 Address:** Kali Asthan Mandir Chowk, Near CMC
 - **⭐ Rating:** 4.4 ★ (69+ Google Reviews)
 - **📞 Phone:** +91 99731 86420
 - **💬 WhatsApp:** +91 99731 86420

@@ -50,9 +50,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ theme }) => {
               {/* Floating Badge in image */}
               <div className="absolute bottom-6 left-6 right-6 p-5 glass border border-white/10 shadow-xl flex items-center justify-between">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4af37] font-semibold">Sasaram, Bihar</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#d4af37] font-semibold">Location</p>
                   <p className="font-serif text-base sm:text-lg font-bold text-[#f5f5f4] mt-0.5">
-                    Ara Patna Road, Baijla
+                    Kali Asthan Mandir Chowk, Near CMC
                   </p>
                   <p className="text-xs text-white/50">Open Daily · 11:00 AM – 11:00 PM</p>
                 </div>
@@ -91,7 +91,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ theme }) => {
             <p className={`mt-5 text-sm sm:text-base leading-relaxed font-light ${
               theme === 'dark' ? 'text-white/70' : 'text-[#5a554a]'
             }`}>
-              At <strong className="font-medium text-[#d4af37]">Night Queen Restaurant & Lawn</strong>, we believe dining should be an occasion to celebrate. Located conveniently on Ara-Patna Road in Baijla, Sasaram, we have curated a destination where culinary excellence meets soothing natural landscapes.
+              At <strong className="font-medium text-[#d4af37]">Night Queen Restaurant & Lawn</strong>, we believe dining should be an occasion to celebrate. Located conveniently at Kali Asthan Mandir Chowk, Near CMC, we have curated a destination where culinary excellence meets soothing natural landscapes.
             </p>
 
             <p className={`mt-3 text-sm sm:text-base leading-relaxed font-light ${

@@ -39,17 +39,17 @@ export const restaurantConfig: RestaurantConfig = {
   whatsappNumber: "919973186420",
   displayWhatsapp: "+91 99731 86420",
   address: {
-    line1: "Ara Patna Road",
-    locality: "Baijla",
+    line1: "Kali Asthan Mandir Chowk",
+    locality: "Near CMC",
     city: "Sasaram",
     state: "Bihar",
-    pincode: "821113",
+    pincode: "821115",
     country: "India",
-    plusCode: "X2MC+84, Sasaram, Bihar",
-    fullAddress: "Ara Patna Road, Baijla, Sasaram, Bihar 821113, India"
+    plusCode: "",
+    fullAddress: "Kali Asthan Mandir Chowk, Near CMC"
   },
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Night+Queen+Restaurant+%26+Lawn+Baijla+Sasaram+Bihar",
-  mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115535.79255745487!2d83.94508492025219!3d24.95475960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398dc371b63ff2f9%3A0xe5a14db64585c9a7!2sNight%20Queen%20Restaurant%20%26%20Lawn!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kali+Asthan+Mandir+Chowk+Near+CMC+Sasaram",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=Kali+Asthan+Mandir+Chowk,+Near+CMC,+Sasaram&t=&z=16&ie=UTF8&iwloc=&output=embed",
   openingHours: {
     status: "Open Daily",
     closingTime: "Closes 11:00 PM",
@@ -133,7 +133,7 @@ export const experiencesData: ExperienceItem[] = [
     id: "no-contact-delivery",
     title: "No-Contact Delivery & Drive-Through",
     hindiTitle: "होम डिलीवरी & ड्राइव-थ्रू",
-    description: "Convenient gourmet dining when you prefer to dine at home or pick up fresh delicacies on the go along Ara-Patna Road.",
+    description: "Convenient gourmet dining when you prefer to dine at home or pick up fresh delicacies on the go at Kali Asthan Mandir Chowk, Near CMC.",
     image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop&q=80",
     tag: "Express Service"
   }
@@ -447,7 +447,7 @@ export const customerReviewsData: ReviewItem[] = [
     rating: 5,
     date: "Verified Google Review",
     visitType: "Dinner with Friends",
-    review: "The architectural facade and lighting look luxurious from Ara Patna Road. Ample parking space, clean hygienic seating, and quick service. Dum Biryani was full of aroma and authentic taste. Highly recommended for highway travelers and locals alike.",
+    review: "The architectural facade and lighting look luxurious from Kali Asthan Mandir Chowk. Ample parking space, clean hygienic seating, and quick service. Dum Biryani was full of aroma and authentic taste. Highly recommended for travelers and locals alike.",
     verified: true
   },
   {

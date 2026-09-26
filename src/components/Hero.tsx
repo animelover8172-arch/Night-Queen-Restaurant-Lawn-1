@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-6 text-sm sm:text-base md:text-lg text-white/70 max-w-2xl font-light leading-relaxed text-center"
         >
-          A refined dining experience where exceptional food, elegant ambience, and unforgettable celebrations come together at Night Queen Restaurant & Lawn along Ara-Patna Road.
+          A refined dining experience where exceptional food, elegant ambience, and unforgettable celebrations come together at Night Queen Restaurant & Lawn, Kali Asthan Mandir Chowk, Near CMC.
         </motion.p>
 
         {/* Key Experience Feature Tags */}
@@ -135,8 +135,8 @@ export const Hero: React.FC = () => {
           <div className="h-10 w-[1px] bg-white/10 hidden sm:block" />
 
           <div className="hidden sm:flex flex-col items-start text-left">
-            <span className="text-2xl sm:text-3xl font-serif text-[#d4af37]">Ara-Patna Rd</span>
-            <span className="text-[10px] text-white/50 uppercase tracking-widest">Baijla, Sasaram</span>
+            <span className="text-xl sm:text-2xl font-serif text-[#d4af37]">Kali Asthan Chowk</span>
+            <span className="text-[10px] text-white/50 uppercase tracking-widest">Near CMC</span>
           </div>
         </motion.div>
       </div>

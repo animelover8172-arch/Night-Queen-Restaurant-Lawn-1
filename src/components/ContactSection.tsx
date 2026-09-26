@@ -34,7 +34,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ theme }) => {
           <p className={`mt-4 text-sm sm:text-base font-light ${
             theme === 'dark' ? 'text-white/60' : 'text-[#5a554a]'
           }`}>
-            Conveniently located on Ara-Patna Road in Baijla, Sasaram with ample vehicle parking and highway accessibility.
+            Conveniently located at Kali Asthan Mandir Chowk, Near CMC with ample vehicle parking and easy accessibility.
           </p>
         </div>
 
@@ -56,15 +56,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ theme }) => {
                 </div>
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4af37] font-semibold">Our Location</p>
-                  <h3 className="font-serif text-lg font-bold mt-1 text-[#f5f5f4]">Ara Patna Road, Baijla</h3>
+                  <h3 className="font-serif text-lg font-bold mt-1 text-[#f5f5f4]">Kali Asthan Mandir Chowk, Near CMC</h3>
                   <p className={`text-xs sm:text-sm mt-1 leading-relaxed ${
                     theme === 'dark' ? 'text-white/60' : 'text-[#686358]'
                   }`}>
                     {restaurantConfig.address.fullAddress}
                   </p>
-                  <div className="mt-2 text-xs text-[#d4af37] font-mono">
-                    Plus Code: {restaurantConfig.address.plusCode}
-                  </div>
                 </div>
               </div>
             </div>
@@ -153,7 +150,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ theme }) => {
               {/* Google Maps iFrame */}
               <iframe
                 title="Night Queen Restaurant and Lawn Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115535.79255745487!2d83.94508492025219!3d24.95475960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398dc371b63ff2f9%3A0xe5a14db64585c9a7!2sNight%20Queen%20Restaurant%20%26%20Lawn!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src={restaurantConfig.mapsEmbedUrl}
                 className="w-full h-full min-h-[380px] border-0 opacity-90"
                 allowFullScreen={true}
                 loading="lazy"
@@ -162,7 +159,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ theme }) => {
 
               {/* Map Floating Location Pill */}
               <div className="absolute top-4 left-4 p-3.5 bg-black/90 backdrop-blur-md border border-white/15 text-left shadow-lg">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#d4af37] font-bold">Sasaram, Bihar</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#d4af37] font-bold">Kali Asthan Mandir Chowk, Near CMC</p>
                 <p className="font-serif text-xs sm:text-sm font-semibold text-[#f5f5f4]">
                   Night Queen Restaurant & Lawn
                 </p>

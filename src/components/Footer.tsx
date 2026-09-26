@@ -89,10 +89,10 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
           {/* Contact & Hours */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]">
-              Sasaram Location
+              Restaurant Location
             </h4>
             <p className="text-xs text-white/60 leading-relaxed">
-              Ara Patna Road, Baijla, Sasaram, Bihar 821113, India
+              {restaurantConfig.address.fullAddress}
             </p>
             <div className="pt-1">
               <a

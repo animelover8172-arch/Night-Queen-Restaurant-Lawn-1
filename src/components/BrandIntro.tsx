@@ -42,7 +42,7 @@ export const BrandIntro: React.FC<BrandIntroProps> = ({ theme }) => {
           <p className={`mt-6 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto ${
             theme === 'dark' ? 'text-white/70' : 'text-[#5a554a]'
           }`}>
-            Located along Ara-Patna Road in Baijla, Sasaram, <strong className="font-medium text-[#d4af37]">Night Queen Restaurant & Lawn</strong> brings together royal hospitality, culinary craftsmanship, and an open-air natural oasis designed for every celebration.
+            Located at Kali Asthan Mandir Chowk, Near CMC, <strong className="font-medium text-[#d4af37]">Night Queen Restaurant & Lawn</strong> brings together royal hospitality, culinary craftsmanship, and an open-air natural oasis designed for every celebration.
           </p>
         </div>
 
