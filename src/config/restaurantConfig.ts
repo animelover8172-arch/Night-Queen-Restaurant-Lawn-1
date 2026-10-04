@@ -11,21 +11,33 @@ import galleryImg4 from '../assets/images/regenerated_image_1786871661794.png';
 import galleryImg5 from '../assets/images/regenerated_image_1786871682140.png';
 import galleryImg6 from '../assets/images/regenerated_image_1786871696941.png';
 import galleryImg7 from '../assets/images/regenerated_image_1786871709573.png';
-import paneerButterMasalaImg from '../assets/images/paneer_butter_masala_1790176705016.jpg';
-import murghDumBiryaniImg from '../assets/images/murgh_dum_biryani_1790176718610.jpg';
-import dalMakhaniRoyalImg from '../assets/images/dal_makhani_royal_1790176731091.jpg';
-import chickenTikkaPlatterImg from '../assets/images/chicken_tikka_platter_1790176743607.jpg';
-import kadhaiPaneerImg from '../assets/images/kadai_paneer_curry_1790176183184.jpg';
-import muttonRoganJoshImg from '../assets/images/mutton_rogan_josh_1790176754285.jpg';
-import crispyChilliPaneerImg from '../assets/images/crispy_chilli_paneer_1790176764994.jpg';
-import vegHakkaNoodlesImg from '../assets/images/veg_hakka_noodles_1790176196282.jpg';
-import crispyChilliChickenImg from '../assets/images/crispy_chilli_chicken_1790176776697.jpg';
-import signatureBlueLagoonImg from '../assets/images/signature_blue_lagoon_1790176788937.jpg';
-import freshMintMojitoImg from '../assets/images/fresh_mint_mojito_1790176802595.jpg';
-import mangoPassionCoolerImg from '../assets/images/mango_passion_cooler_1790176207511.jpg';
-import sizzlingBrownieImg from '../assets/images/sizzling_brownie_sundae_1790176218325.jpg';
-import royalGulabJamunImg from '../assets/images/royal_gulab_jamun_1790176230816.jpg';
-import butterGarlicNaanImg from '../assets/images/butter_garlic_naan_1790176241528.jpg';
+
+// New Premium Menu Item Images
+import paneerTikkaImg from '../assets/images/paneer_tikka_1791122949245.jpg';
+import chilliPaneerClassicImg from '../assets/images/chilli_paneer_classic_1791122959829.jpg';
+import chickenTikkaImg from '../assets/images/chicken_tikka_1791122970464.jpg';
+import chickenChilliImg from '../assets/images/chicken_chilli_1791122981290.jpg';
+import chickenLolipopImg from '../assets/images/chicken_lollipop_1791122992014.jpg';
+import frenchFriesImg from '../assets/images/french_fries_1791123005044.jpg';
+import crispyChilliPotatoImg from '../assets/images/crispy_chilli_potato_1791123016528.jpg';
+import paneerButterMasalaImg from '../assets/images/paneer_butter_masala_1791123184567.jpg';
+import kadhaiPaneerImg from '../assets/images/kadhai_paneer_1791123195820.jpg';
+import shahiPaneerImg from '../assets/images/shahi_paneer_1791123029669.jpg';
+import yellowDalTadkaImg from '../assets/images/yellow_dal_tadka_1791123041306.jpg';
+import dalMakhaniImg from '../assets/images/dal_makhani_1791123208168.jpg';
+import butterChickenImg from '../assets/images/butter_chicken_1791123145943.jpg';
+import chickenTikkaMasalaImg from '../assets/images/chicken_tikka_masala_1791123051722.jpg';
+import chickenCurryImg from '../assets/images/chicken_curry_1791123062275.jpg';
+import muttonRoganJoshImg from '../assets/images/mutton_rogan_josh_1791123233305.jpg';
+import jeeraRiceImg from '../assets/images/jeera_rice_1791123074394.jpg';
+import chickenBiryaniImg from '../assets/images/chicken_biryani_1791123157979.jpg';
+import vegBiryaniImg from '../assets/images/veg_biryani_1791123086225.jpg';
+import tandooriRotiImg from '../assets/images/tandoori_roti_1791123097506.jpg';
+import butterNaanImg from '../assets/images/butter_garlic_naan_1791123170464.jpg';
+import lacchaParathaImg from '../assets/images/laccha_paratha_1791123111247.jpg';
+import coldCoffeeImg from '../assets/images/cold_coffee_1791123121873.jpg';
+import virginMojitoImg from '../assets/images/virgin_mojito_1791123220514.jpg';
+import gulabJamunIceCreamImg from '../assets/images/gulab_jamun_ice_cream_1791123132378.jpg';
 
 export const restaurantConfig: RestaurantConfig = {
   name: "Night Queen Restaurant & Lawn",
@@ -36,6 +48,23 @@ export const restaurantConfig: RestaurantConfig = {
   reviewCount: "69+",
   phone: "+919973186420",
   displayPhone: "+91 99731 86420",
+  phoneNumbers: [
+    {
+      number: "+919973186420",
+      display: "+91 99731 86420",
+      label: "Main Desk"
+    },
+    {
+      number: "+919122657448",
+      display: "+91 91226 57448",
+      label: "Direct Line"
+    },
+    {
+      number: "+919162365100",
+      display: "+91 91623 65100",
+      label: "Support & Orders"
+    }
+  ],
   whatsappNumber: "919973186420",
   displayWhatsapp: "+91 99731 86420",
   address: {
@@ -179,193 +208,323 @@ export const whyChooseUsData: WhyUsItem[] = [
 ];
 
 export const menuItemsData: MenuItem[] = [
-  // INDIAN SPECIALTIES
+  // STARTERS / APPETIZERS — VEG & NON-VEG
   {
-    id: "m-1",
+    id: "starters-paneer-tikka",
+    name: "Paneer Tikka",
+    hindiName: "पनीर टिक्का",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Tender cottage cheese cubes marinated in hung curd, freshly ground aromatic herbs, and roasted in clay tandoor with charred capsicum and onions.",
+    price: "₹239 / ₹269 / ₹279 / ₹289",
+    image: paneerTikkaImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isVeg: true
+  },
+  {
+    id: "starters-chilli-paneer-classic",
+    name: "Chilli Paneer Classic",
+    hindiName: "चिल्ली पनीर क्लासिक",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Crispy fried cottage cheese wok-tossed in signature spicy Indo-Chinese dark soy glaze, crunchy bell peppers, and scallions.",
+    price: "₹239",
+    image: chilliPaneerClassicImg,
+    isPopular: true,
+    isSpicy: true,
+    isVeg: true
+  },
+  {
+    id: "starters-chicken-tikka",
+    name: "Chicken Tikka",
+    hindiName: "चिकन टिक्का",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Succulent boneless chicken morsels steeped in spiced Kashmiri red chili marinade and grilled to juicy, smoky perfection.",
+    price: "₹259 / ₹289 / ₹299",
+    image: chickenTikkaImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isSpicy: true,
+    isVeg: false
+  },
+  {
+    id: "starters-chicken-chilli",
+    name: "Chicken Chilli",
+    hindiName: "चिकन चिल्ली",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Crispy chicken pieces tossed in pungent garlic chili sauce with crisp diced bell peppers and slit green chilies.",
+    price: "₹249 / ₹269 / ₹279",
+    image: chickenChilliImg,
+    isSpicy: true,
+    isVeg: false
+  },
+  {
+    id: "starters-chicken-lolipop",
+    name: "Chicken Lolipop",
+    hindiName: "चिकन लॉलीपॉप",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Crisp-fried frenched chicken winglets tossed in savory Schezwan glaze, served with gourmet dipping sauce.",
+    price: "₹259 / ₹289",
+    image: chickenLolipopImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isSpicy: true,
+    isVeg: false
+  },
+  {
+    id: "starters-french-fries",
+    name: "French Fries",
+    hindiName: "फ्रेंच फ्राइज़",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Golden crispy potato batons fried to light crunchy perfection, seasoned with fine sea salt and served with tangy dips.",
+    price: "₹99",
+    image: frenchFriesImg,
+    isVeg: true
+  },
+  {
+    id: "starters-crispy-chilli-potato",
+    name: "Crispy Chilli Potato",
+    hindiName: "क्रिस्पी चिल्ली पोटैटो",
+    category: "STARTERS",
+    subCategory: "Starters & Appetizers",
+    description: "Crispy fried finger potatoes coated with honey chili garlic sauce, garnished with toasted sesame seeds and fresh spring onions.",
+    price: "₹179",
+    image: crispyChilliPotatoImg,
+    isSpicy: true,
+    isVeg: true
+  },
+
+  // VEG MAIN COURSE
+  {
+    id: "veg-main-paneer-butter-masala",
     name: "Paneer Butter Masala",
     hindiName: "पनीर बटर मसाला",
-    category: "INDIAN",
-    subCategory: "Main Course",
-    description: "Fresh cottage cheese cubes simmered in a velvety, buttery tomato and cashew gravy with aromatic kasuri methi.",
-    price: 260,
+    category: "VEG",
+    subCategory: "Veg Main Course",
+    description: "Silky soft paneer cubes simmered in a velvety tomato and cashew nut gravy, finished with fresh butter and fenugreek leaves.",
+    price: "₹269 / ₹279",
     image: paneerButterMasalaImg,
     isChefSpecial: true,
     isPopular: true,
     isVeg: true
   },
   {
-    id: "m-2",
-    name: "Dum Handi Murgh Biryani",
-    hindiName: "दम हांडी मुर्ग बिरयानी",
-    category: "NON-VEG",
-    subCategory: "Biryani & Rice",
-    description: "Fragrant long-grain basmati rice layered with tender marinated chicken, saffron, caramelised onions, and royal spices.",
-    price: 320,
-    image: murghDumBiryaniImg,
-    isChefSpecial: true,
-    isPopular: true,
-    isSpicy: true,
-    isVeg: false
-  },
-  {
-    id: "m-3",
-    name: "Dal Makhani Royal",
-    hindiName: "दाल मखनी रॉयल",
-    category: "VEG",
-    subCategory: "Lentils",
-    description: "Black lentils slow-cooked overnight over charcoal, finished with churned butter and fresh organic cream.",
-    price: 220,
-    image: dalMakhaniRoyalImg,
-    isPopular: true,
-    isVeg: true
-  },
-  {
-    id: "m-4",
-    name: "Tandoori Chicken Tikka Platter",
-    hindiName: "तंदूरी चिकन टिक्का",
-    category: "NON-VEG",
-    subCategory: "Tandoor Starters",
-    description: "Succulent boneless chicken chunks marinated in hung curd, Kashmiri red chillies, and roasted tandoori spices.",
-    price: 340,
-    image: chickenTikkaPlatterImg,
-    isChefSpecial: true,
-    isPopular: true,
-    isSpicy: true,
-    isVeg: false
-  },
-  {
-    id: "m-5",
-    name: "Kadhai Paneer Special",
+    id: "veg-main-kadhai-paneer",
+    name: "Kadhai Paneer",
     hindiName: "कड़ाही पनीर",
     category: "VEG",
-    subCategory: "Main Course",
-    description: "Cottage cheese tossed with crunchy bell peppers, whole coriander, dried chillies, and freshly ground kadhai masala.",
-    price: 250,
+    subCategory: "Veg Main Course",
+    description: "Cottage cheese and crisp bell peppers tossed in a traditional iron wok with coarsely crushed coriander seeds and roasted spices.",
+    price: "₹269",
     image: kadhaiPaneerImg,
     isSpicy: true,
     isVeg: true
   },
   {
-    id: "m-6",
+    id: "veg-main-shahi-paneer",
+    name: "Shahi Paneer",
+    hindiName: "शाही पनीर",
+    category: "VEG",
+    subCategory: "Veg Main Course",
+    description: "Royal cottage cheese prepared in an opulent white cashew, melon seed and saffron gravy with delicate royal spices.",
+    price: "₹259",
+    image: shahiPaneerImg,
+    isPopular: true,
+    isVeg: true
+  },
+  {
+    id: "veg-main-yellow-dal-tadka",
+    name: "Yellow Dal Tadka",
+    hindiName: "येलो दाल तड़का",
+    category: "VEG",
+    subCategory: "Veg Main Course",
+    description: "Comforting yellow lentils tempered with golden desi ghee, roasted cumin, garlic cloves, and aromatic Kashmiri chilies.",
+    price: "₹119 / ₹129",
+    image: yellowDalTadkaImg,
+    isVeg: true
+  },
+  {
+    id: "veg-main-dal-makhani",
+    name: "Dal Makhani",
+    hindiName: "दाल मखनी",
+    category: "VEG",
+    subCategory: "Veg Main Course",
+    description: "Slow-simmered whole black lentils and kidney beans cooked overnight over charcoal with churned butter and organic cream.",
+    price: "₹199 / ₹249",
+    image: dalMakhaniImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isVeg: true
+  },
+
+  // NON-VEG MAIN COURSE
+  {
+    id: "nonveg-main-butter-chicken",
+    name: "Butter Chicken / Chicken Butter Masala",
+    hindiName: "बटर चिकन / चिकन बटर मसाला",
+    category: "NON-VEG",
+    subCategory: "Non-Veg Main Course",
+    description: "Tender tandoori chicken cooked in a rich, buttery satin tomato-makhani sauce infused with aromatic spices and cream.",
+    price: "₹310 / ₹319",
+    image: butterChickenImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isVeg: false
+  },
+  {
+    id: "nonveg-main-chicken-tikka-masala",
+    name: "Chicken Tikka Masala",
+    hindiName: "चिकन टिक्का मसाला",
+    category: "NON-VEG",
+    subCategory: "Non-Veg Main Course",
+    description: "Clay-oven charred boneless chicken pieces immersed in a deeply spiced, robust onion-tomato masala gravy.",
+    price: "₹270 / ₹309",
+    image: chickenTikkaMasalaImg,
+    isSpicy: true,
+    isVeg: false
+  },
+  {
+    id: "nonveg-main-chicken-curry",
+    name: "Chicken Curry",
+    hindiName: "चिकन करी",
+    category: "NON-VEG",
+    subCategory: "Non-Veg Main Course",
+    description: "Classic homestyle chicken stewed tender in a fragrant spiced onion-ginger-garlic gravy with whole roasted spices.",
+    price: "₹249 / ₹269",
+    image: chickenCurryImg,
+    isVeg: false
+  },
+  {
+    id: "nonveg-main-mutton-rogan-josh",
     name: "Mutton Rogan Josh",
     hindiName: "मटन रोगन जोश",
     category: "NON-VEG",
-    subCategory: "Main Course",
-    description: "Tender goat meat slow-braised in a rich gravy infused with Kashmiri cockscomb flower, fennel, and ginger.",
-    price: 420,
+    subCategory: "Non-Veg Main Course",
+    description: "Authentic Kashmiri tender braised mutton slow-cooked in fragrant red gravy with ratan jot, fennel, and whole spices.",
+    price: "₹399",
     image: muttonRoganJoshImg,
     isChefSpecial: true,
-    isVeg: false
-  },
-  // CHINESE DISHES
-  {
-    id: "m-7",
-    name: "Crispy Chilli Paneer Dry",
-    hindiName: "चिल्ली पनीर",
-    category: "CHINESE",
-    subCategory: "Starters",
-    description: "Golden fried paneer tossed with bell peppers, spring onions, dark soya sauce, and fresh green chillies.",
-    price: 240,
-    image: crispyChilliPaneerImg,
     isPopular: true,
-    isSpicy: true,
-    isVeg: true
-  },
-  {
-    id: "m-8",
-    name: "Veg Hakka Noodles & Manchurian",
-    hindiName: "वेज हक्का नूडल्स & मंचूरियन",
-    category: "CHINESE",
-    subCategory: "Noodles & Rice",
-    description: "Wok-tossed noodles with shredded farm vegetables served alongside crispy vegetable dumplings in savoury gravy.",
-    price: 210,
-    image: vegHakkaNoodlesImg,
-    isVeg: true
-  },
-  {
-    id: "m-9",
-    name: "Crispy Chilli Chicken",
-    hindiName: "चिल्ली चिकन",
-    category: "CHINESE",
-    subCategory: "Starters",
-    description: "Crisp-fried chicken morsels glazed in sweet & spicy garlic soy sauce with cracked black pepper.",
-    price: 290,
-    image: crispyChilliChickenImg,
     isSpicy: true,
     isVeg: false
   },
-  // MOCKTAILS & BEVERAGES
+
+  // RICE & BIRYANI
   {
-    id: "m-10",
-    name: "Night Queen Signature Blue Lagoon",
-    hindiName: "नाइट क्वीन ब्लू लैगून",
-    category: "MOCKTAILS",
-    subCategory: "Mocktail Bar",
-    description: "Refreshing blend of blue curacao syrup, sparkling citrus soda, fresh mint leaves, and lime wheel.",
-    price: 150,
-    image: signatureBlueLagoonImg,
+    id: "rice-jeera-rice",
+    name: "Jeera Rice",
+    hindiName: "जीरा राइस",
+    category: "RICE",
+    subCategory: "Rice & Biryani",
+    description: "Fluffy aged basmati rice tempered with aromatic roasted cumin seeds, pure desi ghee, and fresh coriander.",
+    price: "₹119 / ₹139",
+    image: jeeraRiceImg,
+    isVeg: true
+  },
+  {
+    id: "rice-chicken-biryani",
+    name: "Chicken Biryani / Hydrabadi Chicken Biryani",
+    hindiName: "चिकन बिरयानी / हैदराबादी चिकन बिरयानी",
+    category: "RICE",
+    subCategory: "Rice & Biryani",
+    description: "Dum-cooked royal basmati rice layered with succulent marinated chicken, saffron milk, fried golden onions, and mint.",
+    price: "₹239 / ₹299",
+    image: chickenBiryaniImg,
     isChefSpecial: true,
     isPopular: true,
-    isVeg: true
+    isSpicy: true,
+    isVeg: false
   },
   {
-    id: "m-11",
-    name: "Fresh Mint Mojito",
-    hindiName: "फ्रेश मिंट मोहीत",
-    category: "MOCKTAILS",
-    subCategory: "Mocktail Bar",
-    description: "Muddled garden mint, hand-pressed lime juice, crushed ice, and effervescent sparkling water.",
-    price: 130,
-    image: freshMintMojitoImg,
+    id: "rice-veg-biryani",
+    name: "Veg Biryani",
+    hindiName: "वेज बिरयानी",
+    category: "RICE",
+    subCategory: "Rice & Biryani",
+    description: "Fragrant saffron long-grain basmati rice layered with garden-fresh vegetables, paneer chunks, brown onions, and spices.",
+    price: "₹199 / ₹209",
+    image: vegBiryaniImg,
     isVeg: true
   },
+
+  // BREADS
   {
-    id: "m-12",
-    name: "Mango Passion Sunset Cooler",
-    hindiName: "मैंगो पैशन कूलर",
-    category: "MOCKTAILS",
-    subCategory: "Mocktail Bar",
-    description: "Tropical Alphonso mango puree blended with passion fruit, crushed ice, and a dash of grenadine.",
-    price: 160,
-    image: mangoPassionCoolerImg,
-    isChefSpecial: true,
-    isVeg: true
-  },
-  // DESSERTS
-  {
-    id: "m-13",
-    name: "Sizzling Brownie with Vanilla Ice Cream",
-    hindiName: "सिज़लिंग ब्राउनी",
-    category: "DESSERTS",
-    subCategory: "Desserts",
-    description: "Rich dark chocolate walnut brownie served sizzling hot on a cast-iron platter, crowned with rich vanilla gelato and hot fudge.",
-    price: 190,
-    image: sizzlingBrownieImg,
-    isChefSpecial: true,
-    isPopular: true,
-    isVeg: true
-  },
-  {
-    id: "m-14",
-    name: "Royal Gulab Jamun with Rabri",
-    hindiName: "गुलाब जामुन विथ रबड़ी",
-    category: "DESSERTS",
-    subCategory: "Desserts",
-    description: "Warm golden khoya dumplings soaked in saffron-cardamom syrup, served over chilled slow-reduced pistachios rabri.",
-    price: 140,
-    image: royalGulabJamunImg,
-    isPopular: true,
-    isVeg: true
-  },
-  {
-    id: "m-15",
-    name: "Butter Garlic Naan & Kulcha",
-    hindiName: "बटर गार्लिक नान",
-    category: "INDIAN",
+    id: "breads-tandoori-roti",
+    name: "Tandoori Roti / Butter Roti",
+    hindiName: "तंदूरी रोटी / बटर रोटी",
+    category: "BREADS",
     subCategory: "Breads",
-    description: "Fluffy leavened tandoor bread brushed generously with pure butter, crushed fresh garlic, and toasted coriander.",
-    price: 60,
-    image: butterGarlicNaanImg,
+    description: "Traditional whole-wheat flatbread freshly baked against hot tandoor clay walls, served plain or brushed with churned butter.",
+    price: "₹15 / ₹20",
+    image: tandooriRotiImg,
+    isVeg: true
+  },
+  {
+    id: "breads-butter-naan",
+    name: "Butter Naan / Garlic Naan",
+    hindiName: "बटर नान / गार्लिक नान",
+    category: "BREADS",
+    subCategory: "Breads",
+    description: "Pillowy refined flour bread baked in tandoor, lavishly brushed with melted butter or crushed fresh garlic and coriander.",
+    price: "₹35 / ₹49",
+    image: butterNaanImg,
+    isPopular: true,
+    isVeg: true
+  },
+  {
+    id: "breads-laccha-paratha",
+    name: "Laccha Paratha",
+    hindiName: "लच्छा पराठा",
+    category: "BREADS",
+    subCategory: "Breads",
+    description: "Crispy, multi-layered spiral flatbread prepared with fine layers and pure ghee, baked crisp in clay oven.",
+    price: "₹59",
+    image: lacchaParathaImg,
+    isVeg: true
+  },
+
+  // BEVERAGES & DESSERTS
+  {
+    id: "beverages-cold-coffee",
+    name: "Cold Coffee",
+    hindiName: "कोल्ड कॉफ़ी",
+    category: "MOCKTAILS",
+    subCategory: "Beverages & Desserts",
+    description: "Rich blended espresso cold coffee served chilled with chocolate swirl and thick frothy crown.",
+    price: "₹109",
+    image: coldCoffeeImg,
+    isPopular: true,
+    isVeg: true
+  },
+  {
+    id: "beverages-virgin-mojito",
+    name: "Virgin Mojito",
+    hindiName: "वर्जिन मोहीत",
+    category: "MOCKTAILS",
+    subCategory: "Beverages & Desserts",
+    description: "Crisp and invigorating mocktail muddled with freshly plucked mint leaves, crushed ice, lime wheels, and effervescent soda.",
+    price: "₹129",
+    image: virginMojitoImg,
+    isChefSpecial: true,
+    isPopular: true,
+    isVeg: true
+  },
+  {
+    id: "desserts-gulab-jamun-ice-cream",
+    name: "Gulab Jamun With Ice Cream",
+    hindiName: "गुलाब जामुन विथ आइसक्रीम",
+    category: "DESSERTS",
+    subCategory: "Beverages & Desserts",
+    description: "Warm, syrup-soaked golden khoya gulab jamuns served alongside a chilled scoop of velvety vanilla bean ice cream and pistachios.",
+    price: "₹69",
+    image: gulabJamunIceCreamImg,
+    isChefSpecial: true,
+    isPopular: true,
     isVeg: true
   }
 ];

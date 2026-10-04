@@ -368,8 +368,22 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({ theme })
 
                 <div className="text-center pt-2">
                   <p className="text-xs text-white/50">
-                    Need immediate assistance? Call us directly at <a href={`tel:${restaurantConfig.phone}`} className="text-[#d4af37] font-semibold underline">{restaurantConfig.displayPhone}</a>
+                    Need immediate assistance? Call our desk directly:
                   </p>
+                  <div className="mt-1.5 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-semibold">
+                    {restaurantConfig.phoneNumbers.map((p, i) => (
+                      <React.Fragment key={p.number}>
+                        {i > 0 && <span className="text-white/20">·</span>}
+                        <a
+                          id={`reservation-phone-link-${i}`}
+                          href={`tel:${p.number}`}
+                          className="text-[#d4af37] hover:underline"
+                        >
+                          {p.display}
+                        </a>
+                      </React.Fragment>
+                    ))}
+                  </div>
                 </div>
 
               </form>

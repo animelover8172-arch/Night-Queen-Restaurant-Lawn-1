@@ -94,14 +94,20 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
             <p className="text-xs text-white/60 leading-relaxed">
               {restaurantConfig.address.fullAddress}
             </p>
-            <div className="pt-1">
-              <a
-                href={`tel:${restaurantConfig.phone}`}
-                className="text-xs font-semibold text-[#d4af37] hover:underline block"
-              >
-                Call: {restaurantConfig.displayPhone}
-              </a>
-              <p className="text-[11px] text-emerald-400 mt-1 font-medium">
+            <div className="pt-1 space-y-1">
+              <p className="text-[10px] uppercase tracking-wider text-white/40 font-semibold">Contact & Reservations:</p>
+              {restaurantConfig.phoneNumbers.map((p, index) => (
+                <a
+                  key={p.number}
+                  id={`footer-phone-${index}`}
+                  href={`tel:${p.number}`}
+                  className="text-xs font-semibold text-[#d4af37] hover:underline flex items-center justify-between"
+                >
+                  <span>{p.display}</span>
+                  <span className="text-[10px] text-white/40">{p.label}</span>
+                </a>
+              ))}
+              <p className="text-[11px] text-emerald-400 pt-1 font-medium">
                 Open Daily: 11:00 AM – 11:00 PM
               </p>
             </div>

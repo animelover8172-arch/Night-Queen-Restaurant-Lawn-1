@@ -73,19 +73,33 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ theme }) => {
                 : 'bg-white border-[#ded5c2]'
             }`}>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#d4af37] flex items-center justify-center text-[#d4af37] shrink-0">
+                <div className="w-10 h-10 border border-[#d4af37] flex items-center justify-center text-[#d4af37] shrink-0 mt-0.5">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4af37] font-semibold">Direct Phone</p>
-                  <a
-                    id="contact-direct-phone"
-                    href={`tel:${restaurantConfig.phone}`}
-                    className="font-serif text-xl font-bold mt-1 text-[#d4af37] hover:underline block"
-                  >
-                    {restaurantConfig.displayPhone}
-                  </a>
-                  <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-white/60' : 'text-[#686358]'}`}>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4af37] font-semibold">Direct Phone Lines</p>
+                    <span className="text-[10px] text-white/50 uppercase tracking-wider bg-white/5 px-2 py-0.5 border border-white/10">3 Lines Available</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    {restaurantConfig.phoneNumbers.map((item, idx) => (
+                      <div key={item.number} className="flex items-center justify-between border-b border-white/5 pb-1.5 last:border-b-0 last:pb-0">
+                        <a
+                          id={`contact-phone-link-${idx}`}
+                          href={`tel:${item.number}`}
+                          className="font-serif text-base sm:text-lg font-bold text-[#d4af37] hover:underline flex items-center gap-1.5"
+                        >
+                          <span>{item.display}</span>
+                        </a>
+                        <span className="text-[10px] uppercase tracking-wider text-white/50 bg-white/5 px-2 py-0.5 border border-white/10">
+                          {item.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className={`text-xs mt-2.5 ${theme === 'dark' ? 'text-white/60' : 'text-[#686358]'}`}>
                     For table reservations, party bookings & home delivery
                   </p>
                 </div>

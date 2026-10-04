@@ -2,10 +2,10 @@ export interface MenuItem {
   id: string;
   name: string;
   hindiName?: string;
-  category: 'VEG' | 'NON-VEG' | 'INDIAN' | 'CHINESE' | 'DESSERTS' | 'MOCKTAILS';
+  category: 'VEG' | 'NON-VEG' | 'INDIAN' | 'CHINESE' | 'DESSERTS' | 'MOCKTAILS' | 'STARTERS' | 'BREADS' | 'RICE';
   subCategory?: string;
   description: string;
-  price: number;
+  price: string;
   image: string;
   isChefSpecial?: boolean;
   isPopular?: boolean;
@@ -57,6 +57,11 @@ export interface RestaurantConfig {
   reviewCount: string;
   phone: string;
   displayPhone: string;
+  phoneNumbers: {
+    number: string;
+    display: string;
+    label?: string;
+  }[];
   whatsappNumber: string;
   displayWhatsapp: string;
   address: {

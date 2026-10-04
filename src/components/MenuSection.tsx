@@ -14,21 +14,24 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
 
   const categories = [
     { id: 'ALL', label: 'All Items' },
-    { id: 'VEG', label: 'Pure Veg' },
-    { id: 'NON-VEG', label: 'Non-Veg' },
-    { id: 'INDIAN', label: 'Indian Specials' },
-    { id: 'CHINESE', label: 'Chinese' },
-    { id: 'MOCKTAILS', label: 'Mocktails & Drinks' },
-    { id: 'DESSERTS', label: 'Desserts' },
+    { id: 'STARTERS', label: 'Starters & Appetizers' },
+    { id: 'VEG', label: 'Veg Main Course' },
+    { id: 'NON-VEG', label: 'Non-Veg Main Course' },
+    { id: 'RICE', label: 'Rice & Biryani' },
+    { id: 'BREADS', label: 'Breads' },
+    { id: 'BEVERAGES_DESSERTS', label: 'Beverages & Desserts' },
   ];
 
   const filteredItems = useMemo(() => {
     return menuItemsData.filter((item) => {
-      const matchesCategory =
-        activeCategory === 'ALL' ||
-        (activeCategory === 'VEG' && item.isVeg) ||
-        (activeCategory === 'NON-VEG' && !item.isVeg) ||
-        item.category === activeCategory;
+      let matchesCategory = false;
+      if (activeCategory === 'ALL') {
+        matchesCategory = true;
+      } else if (activeCategory === 'BEVERAGES_DESSERTS') {
+        matchesCategory = item.category === 'MOCKTAILS' || item.category === 'DESSERTS';
+      } else {
+        matchesCategory = item.category === activeCategory;
+      }
 
       const matchesSearch =
         searchQuery.trim() === '' ||
@@ -43,7 +46,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
 
   const handleOrderWhatsApp = (item: MenuItem) => {
     const text = encodeURIComponent(
-      `Hello Night Queen Restaurant & Lawn, I would like to order or inquire about "${item.name}" (₹${item.price}). Please share availability and delivery/dine-in details.`
+      `Hello Night Queen Restaurant & Lawn, I would like to order or inquire about "${item.name}" (${item.price}). Please share availability and dine-in/delivery details.`
     );
     window.open(`https://wa.me/${restaurantConfig.whatsappNumber}?text=${text}`, '_blank');
   };
@@ -74,7 +77,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
           <p className={`mt-4 text-sm sm:text-base font-light ${
             theme === 'dark' ? 'text-white/60' : 'text-[#5a554a]'
           }`}>
-            Explore our chef-curated culinary menu featuring authentic North Indian curries, fragrant biryanis, sizzling Chinese wok dishes, signature mocktails, and decadent desserts.
+            Explore our chef-curated culinary menu featuring authentic tandoori starters, rich North Indian gravies, royal biryanis, fresh clay-oven breads, and refreshing beverages & desserts.
           </p>
         </div>
 
@@ -224,12 +227,12 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
                   {/* Item Details */}
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-start justify-between gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-2">
                         <h3 className="font-serif text-base font-bold tracking-wide text-[#f5f5f4] group-hover:text-[#d4af37] transition-colors leading-snug">
                           {item.name}
                         </h3>
-                        <span className="font-serif text-base font-bold text-[#d4af37] shrink-0">
-                          ₹{item.price}
+                        <span className="font-serif text-sm sm:text-base font-bold text-[#d4af37] shrink-0 whitespace-nowrap bg-[#d4af37]/10 px-2 py-0.5 border border-[#d4af37]/20">
+                          {item.price.startsWith('₹') ? item.price : `₹${item.price}`}
                         </span>
                       </div>
 
@@ -276,7 +279,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
           <p className="text-xs text-white/60 leading-relaxed">
             * Custom catering, buffet packages, and party menus for lawn celebrations are tailored on request. Please speak with our banquet manager for personalized banquet planning.
           </p>
-          <div className="mt-3 flex items-center justify-center gap-4">
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               id="menu-reserve-table-cta"
               href="#reservation"
@@ -284,14 +287,22 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ theme }) => {
             >
               Book a Table for Dinner →
             </a>
-            <span className="text-white/30">·</span>
-            <a
-              id="menu-contact-kitchen-cta"
-              href={`tel:${restaurantConfig.phone}`}
-              className="text-xs font-semibold uppercase tracking-wider text-[#d4af37] hover:underline"
-            >
-              Call Kitchen: {restaurantConfig.displayPhone}
-            </a>
+            <span className="text-white/30 hidden sm:inline">·</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37]">
+              <span className="text-white/50">Call Kitchen:</span>
+              {restaurantConfig.phoneNumbers.map((p, idx) => (
+                <React.Fragment key={p.number}>
+                  {idx > 0 && <span className="text-white/30">/</span>}
+                  <a
+                    id={`menu-call-kitchen-${idx}`}
+                    href={`tel:${p.number}`}
+                    className="hover:underline text-[#d4af37]"
+                  >
+                    {p.display}
+                  </a>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
 

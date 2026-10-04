@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Sun, Moon, Sparkles, MapPin, Calendar } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, Phone, Sun, Moon, Sparkles, MapPin, Calendar, ChevronDown } from 'lucide-react';
 import { restaurantConfig } from '../config/restaurantConfig';
 
 interface NavbarProps {
@@ -11,6 +11,8 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [phoneDropdownOpen, setPhoneDropdownOpen] = useState(false);
+  const phoneDropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
@@ -121,16 +123,41 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          {/* Quick Call Button (Tablet/Desktop) */}
-          <a
-            id="nav-call-btn"
-            href={`tel:${restaurantConfig.phone}`}
-            aria-label="Call Restaurant"
-            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] uppercase tracking-widest font-medium text-[#d4af37] border border-[#d4af37]/40 hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-all"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            <span>{restaurantConfig.displayPhone}</span>
-          </a>
+          {/* Quick Call Button with Multi-number dropdown (Tablet/Desktop) */}
+          <div className="relative hidden sm:block" ref={phoneDropdownRef}>
+            <button
+              id="nav-call-btn"
+              onClick={() => setPhoneDropdownOpen(!phoneDropdownOpen)}
+              aria-label="Call Restaurant Numbers"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] uppercase tracking-widest font-medium text-[#d4af37] border border-[#d4af37]/40 hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-all cursor-pointer"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span>{restaurantConfig.displayPhone}</span>
+              <ChevronDown className={`w-3 h-3 transition-transform ${phoneDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {phoneDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-60 bg-[#0a0a0a] border border-[#d4af37]/40 shadow-2xl p-2 z-50">
+                <p className="text-[10px] uppercase tracking-wider text-white/50 px-2 py-1 font-semibold border-b border-white/10">
+                  Official Phone Lines
+                </p>
+                <div className="mt-1 space-y-1">
+                  {restaurantConfig.phoneNumbers.map((p, idx) => (
+                    <a
+                      key={p.number}
+                      id={`nav-dropdown-phone-${idx}`}
+                      href={`tel:${p.number}`}
+                      onClick={() => setPhoneDropdownOpen(false)}
+                      className="flex items-center justify-between px-2.5 py-1.5 hover:bg-[#d4af37]/15 text-xs text-[#d4af37] hover:text-white transition-colors"
+                    >
+                      <span className="font-semibold">{p.display}</span>
+                      <span className="text-[9px] uppercase tracking-wider text-white/40">{p.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Reserve CTA */}
           <a
@@ -210,24 +237,33 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                 <span>Reserve a Table Now</span>
               </a>
 
-              <div className="grid grid-cols-2 gap-2 pt-1">
-                <a
-                  id="mobile-drawer-call-cta"
-                  href={`tel:${restaurantConfig.phone}`}
-                  className="flex items-center justify-center gap-2 py-2.5 px-3 border border-[#d4af37]/40 text-[#d4af37] text-xs font-semibold rounded-lg bg-[#d4af37]/5 hover:bg-[#d4af37]/10"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>Call Us</span>
-                </a>
+              <div className="pt-2">
+                <p className="text-[10px] uppercase tracking-wider text-white/50 mb-1.5 font-semibold">Direct Call Lines:</p>
+                <div className="space-y-1.5">
+                  {restaurantConfig.phoneNumbers.map((p, idx) => (
+                    <a
+                      key={p.number}
+                      id={`mobile-drawer-call-${idx}`}
+                      href={`tel:${p.number}`}
+                      className="flex items-center justify-between py-2 px-3 border border-[#d4af37]/40 text-[#d4af37] text-xs font-semibold rounded-lg bg-[#d4af37]/5 hover:bg-[#d4af37]/10"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Phone className="w-3.5 h-3.5" />
+                        <span>{p.display}</span>
+                      </div>
+                      <span className="text-[9px] uppercase tracking-wider text-white/40">{p.label}</span>
+                    </a>
+                  ))}
+                </div>
                 <a
                   id="mobile-drawer-directions-cta"
                   href={restaurantConfig.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 py-2.5 px-3 border border-[#38bdf8]/40 text-[#38bdf8] text-xs font-semibold rounded-lg bg-[#38bdf8]/5 hover:bg-[#38bdf8]/10"
+                  className="mt-2 w-full flex items-center justify-center gap-2 py-2.5 px-3 border border-[#38bdf8]/40 text-[#38bdf8] text-xs font-semibold rounded-lg bg-[#38bdf8]/5 hover:bg-[#38bdf8]/10"
                 >
                   <MapPin className="w-3.5 h-3.5" />
-                  <span>Directions</span>
+                  <span>Get Directions on Map</span>
                 </a>
               </div>
             </div>
